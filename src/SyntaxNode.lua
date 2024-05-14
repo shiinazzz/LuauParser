@@ -363,7 +363,7 @@ function SyntaxNode.MakeWhile(Condition: SyntaxNode, Scope: ScopeSyntaxNode, Pos
 		Scope = Scope
 	}, NodeObject)
 end
-export type DoSyntaxNode = SyntaxNode & typeof(SyntaxNode.MakeWhile(nil :: any, nil :: any, DummyPosition))
+export type WhileSyntaxNode = SyntaxNode & typeof(SyntaxNode.MakeWhile(nil :: any, nil :: any, DummyPosition))
 
 function SyntaxNode.MakeRepeatUntil(UntilCondition: SyntaxNode, Scope: ScopeSyntaxNode, Position: NodePosition): RepeatUntilSyntaxNode
 	return setmetatable({
